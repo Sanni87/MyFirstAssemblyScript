@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script type="module">
+import { add, concatStrings, square } from "./build/release.js";
+document.querySelector('.add').innerText = add(1, 2);
+document.querySelector('.concatStrings').innerText = concatStrings(["hey","ouh","lets","go"]);
+document.querySelector('.square').innerText = square(35);
+</script>
+</head>
+<body>
+    <div class="add"></div>
+    <div class="concatStrings"></div>
+    <div class="square"></div>
+</body>
+</html>

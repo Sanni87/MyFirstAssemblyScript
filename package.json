@@ -1,0 +1,31 @@
+{
+  "name": "myfirstassemblyscript",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "node tests/tests.js",
+    "asconf:debug": "asc --config asconfig.json --target debug",
+    "asconf:release": "asc --config asconfig.json --target release",
+    "asconf": "npm run asconf:debug & npm run asconf:release",
+    "asbuild:debug": "asc assembly/index.ts --target debug",
+    "asbuild:release": "asc assembly/index.ts --target release",
+    "asbuild": "npm run asbuild:debug && npm run asbuild:release",
+    "start": "npx serve ."
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "assemblyscript": "^0.25.2"
+  },
+  "type": "module",
+  "exports": {
+    ".": {
+      "import": "./build/release.js",
+      "types": "./build/release.d.ts"
+    }
+  },
+  "devDependencies": {
+    "assemblyscript": "^0.25.2"
+  }
+}
