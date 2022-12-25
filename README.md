@@ -1,0 +1,2 @@
+# MyFirstAssemblyScript
+MyFirstAssemblyScript
