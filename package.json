@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "node tests/tests.js",
+    "test": "node tests/testsJs.js && node tests/testsWa.js",
     "asconf:debug": "asc --config asconfig.json --target debug",
     "asconf:release": "asc --config asconfig.json --target release",
     "asconf": "npm run asconf:debug & npm run asconf:release",
@@ -15,9 +15,6 @@
   },
   "author": "",
   "license": "ISC",
-  "dependencies": {
-    "assemblyscript": "^0.25.2"
-  },
   "type": "module",
   "exports": {
     ".": {
@@ -25,7 +22,7 @@
       "types": "./build/release.d.ts"
     }
   },
-  "devDependencies": {
+  "dependencies": {
     "assemblyscript": "^0.25.2"
   }
 }

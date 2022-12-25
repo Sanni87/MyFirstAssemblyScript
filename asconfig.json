@@ -4,7 +4,8 @@
     "./assembly/index.ts",
     "./assembly/concatString.ts",
     "./assembly/square.ts",
-    "./assembly/heavyTask.ts"
+    "./assembly/heavyTask.ts",
+    "./assembly/fibonacci.ts"
   ],
   "targets": {
     "debug": {

@@ -1,20 +1,12 @@
 import assert from "assert";
-import { add, concatStrings, square, heavyTask } from "../build/release.js";
 import * as tsadd from '../js/index.js';
 import * as tsconcatStrings from '../js/concatString.js';
 import * as tssquare from '../js/square.js';
 import * as tsheavyTask from '../js/heavyTask.js';
+import * as tsfib from '../js/fibonacci.js';
 
 let init, end, seconds;
-
-init = new Date();
-assert.strictEqual(add(1, 2), 3);
-assert.strictEqual(concatStrings(["hola","adios"]), "hola,adios");
-assert.strictEqual(square(5), 25);
-let result = heavyTask(3, 7);
-end = new Date();
-seconds = (end.getTime() - init.getTime()) / 1000;
-console.log(`WebAssembly testsTime: ${seconds}`);
+let fibFirstNum = 40, fibSecondNum = 41, fibthirdNum = 42;
 
 init = new Date();
 
@@ -22,7 +14,10 @@ assert.strictEqual(tsadd.add(1, 2), 3);
 assert.strictEqual(tsconcatStrings.concatStrings(["hola","adios"]), "hola,adios");
 assert.strictEqual(tssquare.square(5), 25);
 let result2 = tsheavyTask.heavyTask(3, 7);
-
+console.log(`result: ${result2}`);
+console.log(`tsfib.fib(${fibFirstNum}): ${tsfib.fib(fibFirstNum)}`);
+console.log(`tsfib.fib(${fibSecondNum}): ${tsfib.fib(fibSecondNum)}`);
+console.log(`tsfib.fib(${fibthirdNum}): ${tsfib.fib(fibthirdNum)}`);
 end = new Date();
 seconds = (end.getTime() - init.getTime()) / 1000;
 console.log(`Js testsTime: ${seconds}`);
